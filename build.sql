@@ -1,22 +1,26 @@
-CREATE DATABASE reconciliation
+CREATE DATABASE reconciliation;
 
 CREATE TABLE raw_info (
-ri_id,
-action_datetime,
-counterpart_id,
-product_id,
-quanitty
+  ri_id INT(9) UNSIGNED NOT NULL AUTO_INCREMENT,
+  action_datetime DATETIME NOT NULL,
+  counterpart_id INT(8) UNSIGNED NOT NULL,
+  product_id INT(8) UNSIGNED,
+  quantity INT(9) NOT NULL,
+  PRIMARY KEY ri_id (ri_id),
+  KEY counterpart_id (counterpart_id),
+  KEY product_id (product_id)
 )
 ;
 CREATE TABLE counterparts (
-counterpart_id,
-counterpart_type_id,
-counterpart_name
+counterpart_id INT(9) UNSIGNED NOT NULL AUTO_INCREMENT,
+counterpart_type_id INT(5) UNSIGNED NOT NULL,
+counterpart_name VARCHAR(32),
+PRIMARY KEY counterpart_id (counterpart_id), 
 )
 ;
 CREATE TABLE counterpart_types (
 counterpart_type_id,
-counterpart_type_name,
+counterpart_type_name VARCHAR(32),
 reconciliation_period_id
 )
 ;
