@@ -1,4 +1,4 @@
-# supplier statement reconciliation database
+# Supplier statement reconciliation DataBase
  a simple MySQL DataBase implementation of suppliers reconciliation system
 
 Supports multiple suppliers, for various products and commercial terms
