@@ -12,6 +12,7 @@ CREATE TABLE `activity` (
 
 CREATE TABLE `counterparts` (
   `counterpart_id` int(8) unsigned NOT NULL AUTO_INCREMENT,
+  `external_counterpart_id` varchar(64),
   `reconciliation_model_id` int(5) unsigned NOT NULL,
   `counterpart_name` varchar(32) DEFAULT NULL,
   PRIMARY KEY (`counterpart_id`),
